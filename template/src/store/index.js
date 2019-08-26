@@ -11,7 +11,7 @@ export function createStore () {
     state: {
       
       // Любые объекты, которые должны быть предзагружены из быстрого состояния сервера
-      objects: IS_SERVER ? SERVER_PRELOADED_DATA.objects : [],
+      // objects: IS_SERVER ? SERVER_PRELOADED_DATA.objects : [],
   
       // Ссылка на REST, загружаемая в зависимости от client\server \\ dev\prod
       REST_server: IS_BROWSER ? "" : (SERVER_IS_PROD ? SERVER_CONFIG.prod.REST_SERVER : SERVER_CONFIG.dev.REST_SERVER),

@@ -11,7 +11,7 @@ class ServerPreloadedState{
   async AllFetchedData() {
     
     // Предзагружаем любые таблицы, которые нужны для быстрого доступа и генерируем готовые списки
-    this.objects = await global.REST.get('objects');
+    // this.objects = await global.REST.get('objects');
     
   }
   

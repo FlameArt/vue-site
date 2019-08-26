@@ -48,6 +48,7 @@ export default {
    * @param route
    */
   asyncData ({ store, route }) {
+
   },
 
 
