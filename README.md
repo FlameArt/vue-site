@@ -30,7 +30,7 @@ Open [http://localhost:7070/](http://localhost:7070/)
 cd project-name
 npm install
 npm run build
-npm start
+npm run start
 ```
 
 ##Usage
