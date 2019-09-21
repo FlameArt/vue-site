@@ -31,7 +31,7 @@ export default class REST {
       params = JSON.stringify(params);
     }
     
-    // Фетч поддерживается - получаем через него, это быстрее
+    // Фетч поддерживается - получаем через него, это лучшая производительность
     if(typeof fetch === "function") {
       
       return new Promise(async (resolve,reject)=>{
@@ -188,6 +188,11 @@ export default class REST {
    * @param table
    * @param fields
    * @param where
+   * WHERE - Может содержать запросы к JSON полям как простой вложенный поиск, например: [123,111] -
+   * через ИЛИ найдёт 123 или 111.
+   * Вариант: {"Item":"Value"} найдёт все значения где Item=Value, включая подполя.
+   * Можно оформлять в виде вложенного массива запросы любой сложности:
+   * ["OR",{"type": 1},["AND",{"id":5},{"class":"new"},{"hello":"go"}]]
    * @param sortfields
    * @param page
    * @param perPage

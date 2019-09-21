@@ -49,6 +49,9 @@ export default {
    */
   asyncData ({ store, route }) {
 
+    // Загружаем в домашнюю страницу списки планов
+    store.commit('setHome');
+
   },
 
 
