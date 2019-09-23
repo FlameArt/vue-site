@@ -188,6 +188,7 @@ export default class REST {
    * @param table
    * @param fields
    * @param where
+   * @param expand
    * WHERE - Может содержать запросы к JSON полям как простой вложенный поиск, например: [123,111] -
    * через ИЛИ найдёт 123 или 111.
    * Вариант: {"Item":"Value"} найдёт все значения где Item=Value, включая подполя.
@@ -198,7 +199,7 @@ export default class REST {
    * @param perPage
    * @return Promise<>
    */
-  get(table, where, fields, sortfields, page, perPage) {
+  get(table, where, expand, fields, sortfields, page, perPage) {
     
     // Генерим запрос
     let query = this.SERVER + '/api/' + table;
@@ -214,7 +215,10 @@ export default class REST {
     
     if(sortfields !== undefined)
       json.sort = sortfields;
-    
+  
+    if(expand !== undefined && expand!==null)
+      json.expand = expand;
+  
     // Страницы
     json['per-page'] = perPage === undefined ? this.perPageDefault : perPage;
     json['page'] = page === undefined ? 1 : page;
