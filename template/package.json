@@ -24,6 +24,7 @@
     "lru-cache": "^4.1.5",
     "route-cache": "0.4.4",
     "serve-favicon": "^2.5.0",
+    "sitemap": "^5.0.1",
     "vue": "^2.5.22",
     "vue-meta": "^1.5.8",
     "vue-router": "^3.0.2",

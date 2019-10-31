@@ -164,3 +164,12 @@ const port = process.env.PORT || 7070
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })
+
+// Начальная конвертация SiteMap и Robots
+const Sitemaps = new (require('./sitemap'));
+Sitemaps.start();
+
+// Обновления раз в полчаса
+setInterval(async function f() {
+  await Sitemaps.start();
+}, 1000 * 60 * 30);

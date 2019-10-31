@@ -13,6 +13,9 @@ class ServerPreloadedState{
     // Предзагружаем любые таблицы, которые нужны для быстрого доступа и генерируем готовые списки
     // this.objects = await global.REST.get('objects');
     
+    // Загружаем контентную модель с роутингами
+    this.Content = await global.REST.get('content');
+    
   }
   
   

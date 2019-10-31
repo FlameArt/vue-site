@@ -2,12 +2,14 @@
 
   "dev": {
     "REST_SERVER": "http://REST",
+    "domain": "http://localhost:7070/",
     "login": "",
     "passw": ""
   },
 
   "prod": {
     "REST_SERVER": "http://REST",
+    "domain": "http://localhost:7070/",
     "login": "",
     "passw": ""
   }
