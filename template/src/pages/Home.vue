@@ -1,6 +1,6 @@
 <template lang="pug">
   div.container
-    img(src="public/logo.png")
+    img(src="public/logo.png", style="width: 200px; height: 200px")
     h1 Vue.js 🔥 Server Side Rendering 🔥 template
     p  ⚡️ Blazing fast UX and performant SSR boilerplate mostly inspired by vue hackernews example. ⚡️
     br
