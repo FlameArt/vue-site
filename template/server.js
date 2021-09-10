@@ -98,7 +98,8 @@ const serve = (path, cache) => express.static(resolve(path), {
   maxAge: cache && isProd ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 
-app.use(compression({ threshold: 0 }))
+app.disable('x-powered-by');
+//app.use(compression({ threshold: 0 })) // nginx сожмёт сам
 app.use(favicon('./public/logo-48.png'))
 app.use('/dist', serve('./dist', true))
 app.use('/public', serve('./public', true))
@@ -117,7 +118,7 @@ function render (req, res) {
   const s = Date.now()
 
   res.setHeader('Content-Type', 'text/html')
-  res.setHeader('Server', serverInfo)
+  res.setHeader('Server', 'LULZ Server')
 
   const handleError = err => {
     if (err.url) {
