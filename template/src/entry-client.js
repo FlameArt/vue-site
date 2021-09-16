@@ -2,7 +2,7 @@ import Vue from 'vue'
 import 'es6-promise/auto'
 import { createApp } from './app'
 import ProgressBar from './components/ProgressBar.vue'
-import RESTModule from './libs/REST';
+import RESTModule from 'flamerest';
 
 // Устанавливаем для удобства быструю глобальную переменную, чекающую сервер это или браузер
 window.IS_BROWSER = true;

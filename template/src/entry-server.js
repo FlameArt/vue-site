@@ -1,10 +1,6 @@
 import { createApp } from './app'
-import RESTModule from 'flamerest';
 
 const isDev = process.env.NODE_ENV !== 'production'
-
-// Создаём новый REST, в зависимости от среды [dev\prod]
-global.REST = new RESTModule(isDev ? global.SERVER_CONFIG.dev.REST_SERVER : global.SERVER_CONFIG.prod.REST_SERVER);
 
 // This exported function will be called by `bundleRenderer`.
 // This is where we perform data-prefetching to determine the
