@@ -1,5 +1,5 @@
 import { createApp } from './app'
-import RESTModule from './libs/REST';
+import RESTModule from 'flamerest';
 
 const isDev = process.env.NODE_ENV !== 'production'
 
